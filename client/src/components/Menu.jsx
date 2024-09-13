@@ -1,0 +1,55 @@
+import React from 'react'
+import img2 from "../img/images2.jpg"
+import img3 from "../img/images3.jpg"
+import img4 from "../img/images4.jpg"
+import img5 from "../img/images5.jpg"
+
+const Menu = () => {
+    const posts = [
+        {
+          id: 1,
+          title: "Exploring the Mountains",
+          desc: "A journey through the rocky mountains and the adventures that await.",
+          img: img2
+        },
+        {
+          id: 2,
+          title: "The Art of Cooking",
+          desc: "Delve into the world of culinary arts and discover new recipes.",
+          img: img2
+        },
+        {
+          id: 3,
+          title: "Tech Innovations 2024",
+          desc: "An overview of the latest technological advancements and gadgets.",
+          img: img3
+        },
+        {
+          id: 4,
+          title: "Travel Guide: Paris",
+          desc: "Discover the hidden gems and famous landmarks of Paris.",
+          img: img4
+        },
+        {
+          id: 5,
+          title: "Healthy Living Tips",
+          desc: "Tips and tricks to maintain a healthy lifestyle and well-being.",
+          img: img5
+        }
+      ];
+
+  return (
+    <div className="menu">
+        <h1>Other posts you may like</h1>
+        {posts.map((post) => (
+            <div className="post" key={post.id}>
+                <img src={post.img} alt="" />
+                <h2>{post.title}</h2>
+                <button>Read More</button>
+            </div>
+        ))}
+    </div>
+  )
+}
+
+export default Menu
